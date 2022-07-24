@@ -1,0 +1,14 @@
+const express = require("express");
+const router=express.Router();
+const orderController= require("../controler/orderController");
+router.get('/getAll',orderController.getAll);
+router.post('/getodertrangthai',orderController.getodertrangthai);
+router.post('/updatetrangthai',orderController.updatetrangthai);
+router.post('/updatethanhtoan',orderController.updatethanhtoan);
+router.post('/getodertrangthaiadmin',orderController.getodertrangthaiadmin);
+router.get('/getoder:email',orderController.getOrder);
+router.get('/getdetail:mahd',orderController.getDetail);
+router.post('/addOrder',orderController.addOrder);
+router.post('/addDetail',orderController.addDetail);
+router.get('/getHoadon:mahd',orderController.getHoadon);
+module.exports=router;
